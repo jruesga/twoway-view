@@ -48,6 +48,11 @@ abstract class ClickItemTouchListener implements OnItemTouchListener {
         // intercepting touch events in the host RecyclerView.
     }
 
+    @Override
+    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+        // Ignore
+    }
+
     abstract boolean performItemClick(RecyclerView parent, View view, int position, long id);
     abstract boolean performItemLongClick(RecyclerView parent, View view, int position, long id);
 
